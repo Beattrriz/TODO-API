@@ -70,8 +70,52 @@ Para usar endpoints protegidos, você precisará de um token JWT. Siga os passos
    ```
    - A resposta incluirá o token no campo **accessToken**.
 3. Insira o token no cabeçalho **Authorization** dos endpoints protegidos:
+   - No cabeçalho da página do Swagger contém um botão (Authorize) em verde. Ao clica-lo você deverá inserir no campo Value o comando a seguir e clicar em Authorize para poder utilizar os endpoints protegidos.
    ```
-     Authorization: Bearer {seu_token}
+     Bearer {seu_token}
    ```
+---
+## Endpoints Disponíveis
+
+### TODO
+
+1. Crie uma nova tarefa
+   ```bash
+      POST /api/todos
+         {
+           "title": "Nova Tarefa",
+           "description": "Descrição da tarefa"
+         }
+   ```
+2. Listar todas as tarefas do usuário autenticado
+   ```bash
+     GET /api/todos
+   ```
+3. Obter uma tarefa específica
+   ```bash
+     GET /api/todos/{id}
+   ```
+4. Atualizar uma tarefa existente
+   Caso o usuário não queira atualizar todos os campos basta deixar o campo que não se deseja atualizar como uma string vazia (" ") ou null.
+    ```bash
+     PUT /api/todos/{id}
+      {
+         "title": "Título atualizado",
+         "description": "Descrição atualizada",
+         "completedAt": "2024-12-21 15:00:00"
+      }
+   ```
+5. Excluir uma tarefa
+   ```bash
+     DELETE /api/todos/{id}
+   ```
+
+## Pontos Importantes
+- **Autenticação**: Ceritfique-se de se autenticar para conseguir utilizar os endpoints das tarefas.
+- **Validação de campos**: Certifique-se de enviar todos os campos obrigatórios nos formatos corretos.
+- **Acesso restrito**: Apenas o usuário que criou uma tarefa pode visualizá-la, atualizá-la ou excluí-la.
+- **Conclusão de tarefas**: O campo completedAt é gerado automaticamente.
+
+
   
    
