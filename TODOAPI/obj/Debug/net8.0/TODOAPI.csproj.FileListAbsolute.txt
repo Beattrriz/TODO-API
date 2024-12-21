@@ -148,3 +148,6 @@ D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\TODOAPI.dll
 D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\TODOAPI.pdb
 D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\TODOAPI.genruntimeconfig.cache
 D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\ref\TODOAPI.dll
+D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\TODOAPI.sourcelink.json
+D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\TODOAPI.xml
+D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\TODOAPI.xml

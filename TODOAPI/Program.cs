@@ -49,6 +49,9 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 
+    var xmlFile = Path.Combine(AppContext.BaseDirectory, "TODOAPI.xml"); 
+    c.IncludeXmlComments(xmlFile);
+
     c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
 });
 

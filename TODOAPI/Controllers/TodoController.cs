@@ -21,12 +21,20 @@ namespace TODOAPI.Controllers
             
         }
 
+        private string GetUserIdFromClaims()
+        {
+            return User.FindFirst("id")?.Value;
+        }
+
+        /// <summary>
+        /// Retorna todas as tarefas do usuário autenticado.
+        /// </summary>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Todo>>> GetTodos()
         {
-            var userId = User.FindFirst("id")?.Value;
+            var userId = GetUserIdFromClaims();
 
-            if(userId == null)
+            if (userId == null)
             {
                 return Unauthorized(new { Message = "Usuário não autenticado" });
             }
@@ -47,10 +55,14 @@ namespace TODOAPI.Controllers
             return Ok(result);
         }
 
+        /// <summary>
+        /// Retorna uma tarefa específica do usuário autenticado.
+        /// </summary>
+        /// <param name="id">ID da tarefa.</param>
         [HttpGet("{id}")]
         public async Task<ActionResult<Todo>> GetTodo(int id)
         {
-            var userId = User.FindFirst("id")?.Value;
+            var userId = GetUserIdFromClaims();
             if (userId == null)
             {
                 return Unauthorized(new { Message = "Usuário não autenticado" });
@@ -79,10 +91,14 @@ namespace TODOAPI.Controllers
             return Ok(result);
         }
 
+        /// <summary>
+        /// Cria uma nova tarefa para o usuário autenticado.
+        /// </summary>
+        /// <param name="todoDto">Dados da tarefa a ser criada.</param>
         [HttpPost]
         public async Task<ActionResult<Todo>> CreateTodo([FromBody] TodoDto todoDto)
         {
-            var userId = User.FindFirst("id")?.Value;
+            var userId = GetUserIdFromClaims();
             if (userId == null)
             {
                 return Unauthorized(new { Message = "Usuário não autenticado" });
@@ -102,8 +118,13 @@ namespace TODOAPI.Controllers
             return CreatedAtAction(nameof(GetTodo), new { id = todo.Id }, todo);
         }
 
+        /// <summary>
+        /// Atualiza os dados de uma tarefa existente.
+        /// </summary>
+        /// <param name="id">ID da tarefa a ser atualizada.</param>
+        /// <param name="todoDto">Dados atualizados da tarefa.</param>
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateTodo(int id, [FromBody] TodoUpdateDto updatedTodo)
+        public async Task<IActionResult> UpdateTodo(int id, [FromBody] TodoUpdateDto todoUpdate)
         {
             var todo = await _context.Todos.FindAsync(id);
 
@@ -112,25 +133,25 @@ namespace TODOAPI.Controllers
                 return NotFound(new { Message = "Tarefa não encontrada" });
             }
 
-            var userId = User.FindFirst("id")?.Value;
+            var userId = GetUserIdFromClaims();
             if (todo.UserId.ToString() != userId)
             {
                 return Unauthorized(new { Message = "Usuário não autorizado" });
             }
 
-            if (!string.IsNullOrEmpty(updatedTodo.Title))
+            if (!string.IsNullOrEmpty(todoUpdate.Title))
             {
-                todo.Title = updatedTodo.Title;  
+                todo.Title = todoUpdate.Title;  
             }
 
-            if (!string.IsNullOrEmpty(updatedTodo.Description))
+            if (!string.IsNullOrEmpty(todoUpdate.Description))
             {
-                todo.Description = updatedTodo.Description; 
+                todo.Description = todoUpdate.Description; 
             }
 
-            if (updatedTodo.CompletedAt.HasValue)
+            if (todoUpdate.CompletedAt.HasValue)
             {
-                todo.CompletedAt = updatedTodo.CompletedAt.Value; 
+                todo.CompletedAt = todoUpdate.CompletedAt.Value; 
             }
 
             try
@@ -145,6 +166,10 @@ namespace TODOAPI.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Deleta uma tarefa do usuário autenticado.
+        /// </summary>
+        /// <param name="id">ID da tarefa a ser deletada.</param>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTodo(int id)
         {
@@ -155,7 +180,7 @@ namespace TODOAPI.Controllers
                 return NotFound(new { Message = "Tarefa não encontrada" });
             }
 
-            var userId = User.FindFirst("id")?.Value;
+            var userId = GetUserIdFromClaims();
             if (todo.UserId.ToString() != userId)
             {
                 return Unauthorized(new { Message = "Usuário não autorizado" });

@@ -46,7 +46,8 @@ Antes de iniciar o projeto, certifique-se de que você possui os seguintes requi
    dotnet run
    ```
 6. Acesse o Swagger para documentação e testes:
-   - URL padrão:https://localhost:5001/swagger
+   - URL padrão: https://localhost:5001/swagger
+   - URL documentação Swagger: https://localhost:5001/swagger/v1/swagger.json
 ---
 
 ## Autenticação JWT
@@ -117,7 +118,7 @@ Para usar endpoints protegidos, você precisará de um token JWT. Siga os passos
      GET /api/Todo/{id}
    ```
 4. Atualizar uma tarefa existente
-   Caso o usuário não queira atualizar todos os campos basta deixar o campo que não se deseja atualizar como uma string vazia (" ") ou null.
+   Caso o usuário não queira atualizar todos os campos basta deixar o campo que não se deseja atualizar como uma string vazia ("") para titulo e descrição e null para tarefa completa.
     ```json
      PUT /api/Todo/{id}
       {

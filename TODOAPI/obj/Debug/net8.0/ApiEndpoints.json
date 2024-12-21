@@ -85,7 +85,7 @@
         "IsRequired": true
       },
       {
-        "Name": "updatedTodo",
+        "Name": "todoUpdate",
         "Type": "TODOAPI.DTOs.TodoUpdateDto",
         "IsRequired": true
       }
