@@ -38,8 +38,7 @@
               "RelativeToolTip": "TODOAPI\\DTOs\\TodoDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T23:34:54.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T23:34:54.89Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "TODOAPI\\Models\\Todo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T22:35:19.088Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T22:35:19.088Z"
             },
             {
               "$type": "Document",
@@ -64,8 +62,7 @@
               "RelativeToolTip": "TODOAPI\\Controllers\\TodoController.cs",
               "ViewState": "AgIAAFQAAAAAAAAAAAAuwHUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T21:23:10.21Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T21:23:10.21Z"
             },
             {
               "$type": "Document",
@@ -75,7 +72,7 @@
               "RelativeDocumentMoniker": "TODOAPI\\Program.cs",
               "ToolTip": "D:\\DotNet\\TODOAPI\\TODOAPI\\Program.cs",
               "RelativeToolTip": "TODOAPI\\Program.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAC8AAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T21:13:59.738Z",
               "EditorCaption": ""
