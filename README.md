@@ -32,10 +32,11 @@ Antes de iniciar o projeto, certifique-se de que você possui os seguintes requi
 3. Configure o banco de dados PostgreSQL:
    - Crie um banco de dados com o nome TodoApiDbou outro de sua escolha.
    - Configurar um ConnectionStringno arquivo appsettings.json:
-     ```
+     ```json
      "ConnectionStrings": {
-     "DefaultConnection": "Host=localhost;Database=TodoApiDb;Username=seu_usuario;Password=sua_senha"
+        "DefaultConnection": "Host=localhost;Database=TodoApiDb;Username=seu_usuario;Password=sua_senha"
      }
+     
 4. Aplique as migrações para criar as tabelas no banco:
    ```bash
    dotnet ef database update
@@ -47,22 +48,23 @@ Antes de iniciar o projeto, certifique-se de que você possui os seguintes requi
 6. Acesse o Swagger para documentação e testes:
    - URL padrão:https://localhost:5001/swagger
 ---
-  
+
 ## Autenticação JWT
 
 Para usar endpoints protegidos, você precisará de um token JWT. Siga os passos abaixo:
 
 1. Registre um usuário sem endpoint de autenticação:
-    ```bash
-   POST /api/Auth/register
+    ```json
+   POST /api/User/register
       {
+        "userName": "usuario1",
         "email": "usuario@example.com",
         "password": "sua_senha"
       }
    ```
 2. Faça login para obter o token JWT:
-   ```bash
-   POST /api/Auth/login
+   ```json
+   POST /api/User/login
       {
         "email": "usuario@example.com",
         "password": "sua_senha"
@@ -71,34 +73,53 @@ Para usar endpoints protegidos, você precisará de um token JWT. Siga os passos
    - A resposta incluirá o token no campo **accessToken**.
 3. Insira o token no cabeçalho **Authorization** dos endpoints protegidos:
    - No cabeçalho da página do Swagger contém um botão (Authorize) em verde. Ao clica-lo você deverá inserir no campo Value o comando a seguir e clicar em Authorize para poder utilizar os endpoints protegidos.
-   ```
+   ```bash
      Bearer {seu_token}
    ```
 ---
 ## Endpoints Disponíveis
 
+### User 
+
+1. Registrar um Novo Usuário
+   ```json
+     POST /api/User/register
+      {
+        "userName": "usuario1",
+        "email": "usuario@example.com",
+        "password": "sua_senha"
+      }
+   ```
+2. Fazer Login
+```json
+   POST /api/User/login
+      {
+        "email": "usuario@example.com",
+        "password": "sua_senha"
+      }
+   ```
 ### TODO
 
 1. Crie uma nova tarefa
-   ```bash
-      POST /api/todos
+   ```json
+      POST /api/Todo
          {
            "title": "Nova Tarefa",
            "description": "Descrição da tarefa"
          }
    ```
 2. Listar todas as tarefas do usuário autenticado
-   ```bash
-     GET /api/todos
+   ```json
+     GET /api/Todo
    ```
 3. Obter uma tarefa específica
-   ```bash
-     GET /api/todos/{id}
+  ```json
+     GET /api/Todo/{id}
    ```
 4. Atualizar uma tarefa existente
    Caso o usuário não queira atualizar todos os campos basta deixar o campo que não se deseja atualizar como uma string vazia (" ") ou null.
-    ```bash
-     PUT /api/todos/{id}
+    ```json
+     PUT /api/Todo/{id}
       {
          "title": "Título atualizado",
          "description": "Descrição atualizada",
@@ -106,8 +127,8 @@ Para usar endpoints protegidos, você precisará de um token JWT. Siga os passos
       }
    ```
 5. Excluir uma tarefa
-   ```bash
-     DELETE /api/todos/{id}
+   ```json
+     DELETE /api/Todo/{id}
    ```
 
 ## Pontos Importantes
