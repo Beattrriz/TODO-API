@@ -2,11 +2,12 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using TODOAPI.Interface;
 using TODOAPI.Models;
 
 namespace TODOAPI.Services
 {
-    public class JwtTokenService
+    public class JwtTokenService : IJwtTokenService
     {
         private readonly IConfiguration _configuration;
 

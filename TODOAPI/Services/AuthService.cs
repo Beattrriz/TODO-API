@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TODOAPI.Data;
+using TODOAPI.Interface;
 using TODOAPI.Models;
 
 namespace TODOAPI.Services
 {
-    public class AuthService
+    public class AuthService : IAuthService
     {
         private readonly ApplicationDbContext _context;
         private readonly IPasswordHasher<User> _passwordHasher;
@@ -43,7 +44,7 @@ namespace TODOAPI.Services
 
             if (user == null || _passwordHasher.VerifyHashedPassword(user, user.PasswordHash, password) != PasswordVerificationResult.Success)
             {
-                return null; 
+                return null;
             }
 
             return user;

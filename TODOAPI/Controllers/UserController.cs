@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TODOAPI.DTOs;
+using TODOAPI.Interface;
 using TODOAPI.Services;
 
 namespace TODO_TASK.Controllers
@@ -9,10 +10,10 @@ namespace TODO_TASK.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly AuthService _authService;
-        private readonly JwtTokenService _jwtTokenService;
+        private readonly IAuthService _authService;
+        private readonly IJwtTokenService _jwtTokenService;
 
-        public UserController(AuthService authService, JwtTokenService jwtTokenService)
+        public UserController(IAuthService authService, IJwtTokenService jwtTokenService)
         {
             _authService = authService;
             _jwtTokenService = jwtTokenService;
@@ -43,6 +44,11 @@ namespace TODO_TASK.Controllers
         [HttpPost("Login")]
         public async Task<ActionResult> Login([FromBody] LoginDto loginDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);  
+            }
+
             var user = await _authService.AuthenticateUserAsync(loginDto.Email, loginDto.Password);
 
             if(user == null)
