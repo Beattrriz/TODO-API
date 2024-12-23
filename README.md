@@ -143,8 +143,22 @@ A aplicação inclui testes unitários para garantir o correto funcionamento dos
 
 ### Pré-requisitos para Executar os Testes
 Antes de executar os testes, certifique-se de que você tenha os seguintes requisitos instalados:
-- xUnit - Framework de testes utilizado.
+- xUnit - Framework de testes utilizado. Para instalar:
+   ```bash
+    dotnet add package xunit
+   ```
 - Moq - Framework de mocking para simular dependências.
+  ```bash
+   dotnet add package Moq
+   ```
+- Microsoft.AspNetCore.Mvc.Testing - Utilizado para criar uma instância de servidor da API
+  ```bash
+   dotnet add package Microsoft.AspNetCore.Mvc.Testing
+   ```
+- Microsoft.EntityFrameworkCore.InMemory - Provedor de banco de dados em memória para testes
+  ```bash
+   dotnet add package Microsoft.EntityFrameworkCore.InMemory
+   ```
 
 ## Executando os Testes Unitários
 1. Navegue até a pasta TODOAPITests
