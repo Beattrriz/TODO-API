@@ -18,11 +18,7 @@ namespace TODO_TASK.Controllers
             _authService = authService;
             _jwtTokenService = jwtTokenService;
         }
-
-        /// <summary>
-        /// Registra um novo usuário no sistema.
-        /// </summary>
-        /// <param name="registerDto">Dados necessários para registrar o usuário.</param>
+    
         [HttpPost("registro")]
         public async Task<ActionResult> Register([FromBody] RegisterDto registerDto)
         {
@@ -36,11 +32,7 @@ namespace TODO_TASK.Controllers
                 return BadRequest(new { Message = ex.Message });
             }
         }
-
-        /// <summary>
-        /// Autentica um usuário e gera um token JWT.
-        /// </summary>
-        /// <param name="loginDto">Dados necessários para autenticar o usuário.</param>
+     
         [HttpPost("Login")]
         public async Task<ActionResult> Login([FromBody] LoginDto loginDto)
         {

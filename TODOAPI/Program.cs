@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
+using System.Reflection;
 using System.Text;
 using TODOAPI.Data;
 using TODOAPI.Interface;
@@ -50,9 +52,10 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 
-    var xmlFile = Path.Combine(AppContext.BaseDirectory, "TODOAPI.xml"); 
-    c.IncludeXmlComments(xmlFile);
-
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    c.IncludeXmlComments(xmlPath);
+  
     c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
 });
 

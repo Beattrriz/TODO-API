@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TODOAPI.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b85ee1bf7c82fa9c5e8728cdf47afdcaf2f2103")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+413b7c831036e30fd969b3d07950fa42cabdef4e")]
 [assembly: System.Reflection.AssemblyProductAttribute("TODOAPI.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TODOAPI.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

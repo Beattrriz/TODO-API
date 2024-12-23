@@ -21,14 +21,11 @@ namespace TODOAPI.Controllers
             
         }
 
-        private string GetUserIdFromClaims()
+        private string? GetUserIdFromClaims()
         {
             return User.FindFirst("id")?.Value;
         }
-
-        /// <summary>
-        /// Retorna todas as tarefas do usuário autenticado.
-        /// </summary>
+       
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Todo>>> GetTodos()
         {
@@ -54,11 +51,7 @@ namespace TODOAPI.Controllers
 
             return Ok(result);
         }
-
-        /// <summary>
-        /// Retorna uma tarefa específica do usuário autenticado.
-        /// </summary>
-        /// <param name="id">ID da tarefa.</param>
+      
         [HttpGet("{id}")]
         public async Task<ActionResult<Todo>> GetTodo(int id)
         {
@@ -90,11 +83,7 @@ namespace TODOAPI.Controllers
 
             return Ok(result);
         }
-
-        /// <summary>
-        /// Cria uma nova tarefa para o usuário autenticado.
-        /// </summary>
-        /// <param name="todoDto">Dados da tarefa a ser criada.</param>
+      
         [HttpPost]
         public async Task<ActionResult<Todo>> CreateTodo([FromBody] TodoDto todoDto)
         {
@@ -117,12 +106,7 @@ namespace TODOAPI.Controllers
 
             return CreatedAtAction(nameof(GetTodo), new { id = todo.Id }, todo);
         }
-
-        /// <summary>
-        /// Atualiza os dados de uma tarefa existente.
-        /// </summary>
-        /// <param name="id">ID da tarefa a ser atualizada.</param>
-        /// <param name="todoDto">Dados atualizados da tarefa.</param>
+       
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateTodo(int id, [FromBody] TodoUpdateDto todoUpdate)
         {
@@ -165,11 +149,7 @@ namespace TODOAPI.Controllers
 
             return NoContent();
         }
-
-        /// <summary>
-        /// Deleta uma tarefa do usuário autenticado.
-        /// </summary>
-        /// <param name="id">ID da tarefa a ser deletada.</param>
+      
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTodo(int id)
         {

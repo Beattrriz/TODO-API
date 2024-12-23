@@ -24,8 +24,8 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\TODOAPI\TODOAPI.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="D:\DotNet\TODOAPI\TODOAPI\TODOAPI.csproj" />
+	</ItemGroup>
 
 </Project>

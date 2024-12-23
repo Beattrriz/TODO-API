@@ -1,11 +1,4 @@
 D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\bin\Debug\net8.0\CoverletSourceRootsMapping_TODOAPI.Tests
-D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\obj\Debug\net8.0\TODOAPI.Tests.csproj.AssemblyReference.cache
-D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\obj\Debug\net8.0\MvcTestingAppManifest.json
-D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\obj\Debug\net8.0\TODOAPI.Tests.GeneratedMSBuildEditorConfig.editorconfig
-D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\obj\Debug\net8.0\TODOAPI.Tests.AssemblyInfoInputs.cache
-D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\obj\Debug\net8.0\TODOAPI.Tests.AssemblyInfo.cs
-D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\obj\Debug\net8.0\TODOAPI.Tests.csproj.CoreCompileInputs.cache
-D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\obj\Debug\net8.0\TODOAPI.Tests.sourcelink.json
 D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\bin\Debug\net8.0\testhost.dll
 D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\bin\Debug\net8.0\TODOAPI.deps.json
 D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\bin\Debug\net8.0\TODOAPI.runtimeconfig.json
@@ -443,6 +436,13 @@ D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\bin\Debug\net8.0\runtimes\browser\li
 D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\bin\Debug\net8.0\TODOAPI.dll
 D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\bin\Debug\net8.0\TODOAPI.pdb
 D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\bin\Debug\net8.0\TODOAPI.xml
+D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\obj\Debug\net8.0\TODOAPI.Tests.csproj.AssemblyReference.cache
+D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\obj\Debug\net8.0\MvcTestingAppManifest.json
+D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\obj\Debug\net8.0\TODOAPI.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\obj\Debug\net8.0\TODOAPI.Tests.AssemblyInfoInputs.cache
+D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\obj\Debug\net8.0\TODOAPI.Tests.AssemblyInfo.cs
+D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\obj\Debug\net8.0\TODOAPI.Tests.csproj.CoreCompileInputs.cache
+D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\obj\Debug\net8.0\TODOAPI.Tests.sourcelink.json
 D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\obj\Debug\net8.0\TODOAPI..2022C1B0.Up2Date
 D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\obj\Debug\net8.0\TODOAPI.Tests.dll
 D:\DotNet\TODOAPI\TODOAPITests\TODOAPITests\obj\Debug\net8.0\refint\TODOAPI.Tests.dll

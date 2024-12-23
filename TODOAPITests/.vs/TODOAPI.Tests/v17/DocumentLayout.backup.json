@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "D:\\DotNet\\TODOAPI\\TODOAPITests\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{256CCA44-3CA2-44F3-BD42-B13330C92035}|TODOAPITests\\TODOAPI.Tests.csproj|d:\\dotnet\\todoapi\\todoapitests\\todoapitests\\controllers\\todocontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{256CCA44-3CA2-44F3-BD42-B13330C92035}|TODOAPITests\\TODOAPI.Tests.csproj|solutionrelative:todoapitests\\controllers\\todocontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{256CCA44-3CA2-44F3-BD42-B13330C92035}|TODOAPITests\\TODOAPI.Tests.csproj|d:\\dotnet\\todoapi\\todoapitests\\todoapitests\\todoapi.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{256CCA44-3CA2-44F3-BD42-B13330C92035}|TODOAPITests\\TODOAPI.Tests.csproj|solutionrelative:todoapitests\\todoapi.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256CCA44-3CA2-44F3-BD42-B13330C92035}|TODOAPITests\\TODOAPI.Tests.csproj|d:\\dotnet\\todoapi\\todoapitests\\todoapitests\\controllers\\usercontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256CCA44-3CA2-44F3-BD42-B13330C92035}|TODOAPITests\\TODOAPI.Tests.csproj|solutionrelative:todoapitests\\controllers\\usercontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256CCA44-3CA2-44F3-BD42-B13330C92035}|TODOAPITests\\TODOAPI.Tests.csproj|d:\\dotnet\\todoapi\\todoapitests\\todoapitests\\services\\authservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256CCA44-3CA2-44F3-BD42-B13330C92035}|TODOAPITests\\TODOAPI.Tests.csproj|solutionrelative:todoapitests\\services\\authservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256CCA44-3CA2-44F3-BD42-B13330C92035}|TODOAPITests\\TODOAPI.Tests.csproj|d:\\dotnet\\todoapi\\todoapitests\\todoapitests\\services\\authservicetestsmock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256CCA44-3CA2-44F3-BD42-B13330C92035}|TODOAPITests\\TODOAPI.Tests.csproj|solutionrelative:todoapitests\\services\\authservicetestsmock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256CCA44-3CA2-44F3-BD42-B13330C92035}|TODOAPITests\\TODOAPI.Tests.csproj|d:\\dotnet\\todoapi\\todoapitests\\todoapitests\\services\\jwttokenservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256CCA44-3CA2-44F3-BD42-B13330C92035}|TODOAPITests\\TODOAPI.Tests.csproj|solutionrelative:todoapitests\\services\\jwttokenservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{256CCA44-3CA2-44F3-BD42-B13330C92035}|TODOAPITests\\TODOAPI.Tests.csproj|d:\\dotnet\\todoapi\\todoapitests\\todoapitests\\controllers\\todocontrollertestsmock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{256CCA44-3CA2-44F3-BD42-B13330C92035}|TODOAPITests\\TODOAPI.Tests.csproj|solutionrelative:todoapitests\\controllers\\todocontrollertestsmock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{256CCA44-3CA2-44F3-BD42-B13330C92035}|TODOAPITests\\TODOAPI.Tests.csproj|d:\\dotnet\\todoapi\\todoapitests\\todoapitests\\controllers\\todocontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256CCA44-3CA2-44F3-BD42-B13330C92035}|TODOAPITests\\TODOAPI.Tests.csproj|solutionrelative:todoapitests\\controllers\\todocontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,33 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "UserControllerTests.cs",
+              "DocumentMoniker": "D:\\DotNet\\TODOAPI\\TODOAPITests\\TODOAPITests\\Controllers\\UserControllerTests.cs",
+              "RelativeDocumentMoniker": "TODOAPITests\\Controllers\\UserControllerTests.cs",
+              "ToolTip": "D:\\DotNet\\TODOAPI\\TODOAPITests\\TODOAPITests\\Controllers\\UserControllerTests.cs",
+              "RelativeToolTip": "TODOAPITests\\Controllers\\UserControllerTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T20:37:20.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "TodoControllerTestsMock.cs",
               "DocumentMoniker": "D:\\DotNet\\TODOAPI\\TODOAPITests\\TODOAPITests\\Controllers\\TodoControllerTestsMock.cs",
               "RelativeDocumentMoniker": "TODOAPITests\\Controllers\\TodoControllerTestsMock.cs",
-              "ToolTip": "D:\\DotNet\\TODOAPI\\TODOAPITests\\TODOAPITests\\Controllers\\TodoControllerTestsMock.cs*",
-              "RelativeToolTip": "TODOAPITests\\Controllers\\TodoControllerTestsMock.cs*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAoAAAAAAAAAA==",
+              "ToolTip": "D:\\DotNet\\TODOAPI\\TODOAPITests\\TODOAPITests\\Controllers\\TodoControllerTestsMock.cs",
+              "RelativeToolTip": "TODOAPITests\\Controllers\\TodoControllerTestsMock.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T00:20:38.348Z",
+              "WhenOpened": "2024-12-23T20:34:56.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthServiceTestsMock.cs",
+              "DocumentMoniker": "D:\\DotNet\\TODOAPI\\TODOAPITests\\TODOAPITests\\Services\\AuthServiceTestsMock.cs",
+              "RelativeDocumentMoniker": "TODOAPITests\\Services\\AuthServiceTestsMock.cs",
+              "ToolTip": "D:\\DotNet\\TODOAPI\\TODOAPITests\\TODOAPITests\\Services\\AuthServiceTestsMock.cs",
+              "RelativeToolTip": "TODOAPITests\\Services\\AuthServiceTestsMock.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T20:29:06.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "JwtTokenServiceTests.cs",
+              "DocumentMoniker": "D:\\DotNet\\TODOAPI\\TODOAPITests\\TODOAPITests\\Services\\JwtTokenServiceTests.cs",
+              "RelativeDocumentMoniker": "TODOAPITests\\Services\\JwtTokenServiceTests.cs",
+              "ToolTip": "D:\\DotNet\\TODOAPI\\TODOAPITests\\TODOAPITests\\Services\\JwtTokenServiceTests.cs",
+              "RelativeToolTip": "TODOAPITests\\Services\\JwtTokenServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T20:29:00.187Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TODOAPI.Tests.csproj",
+              "DocumentMoniker": "D:\\DotNet\\TODOAPI\\TODOAPITests\\TODOAPITests\\TODOAPI.Tests.csproj",
+              "RelativeDocumentMoniker": "TODOAPITests\\TODOAPI.Tests.csproj",
+              "ToolTip": "D:\\DotNet\\TODOAPI\\TODOAPITests\\TODOAPITests\\TODOAPI.Tests.csproj",
+              "RelativeToolTip": "TODOAPITests\\TODOAPI.Tests.csproj",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-23T20:28:37.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthServiceTests.cs",
+              "DocumentMoniker": "D:\\DotNet\\TODOAPI\\TODOAPITests\\TODOAPITests\\Services\\AuthServiceTests.cs",
+              "RelativeDocumentMoniker": "TODOAPITests\\Services\\AuthServiceTests.cs",
+              "ToolTip": "D:\\DotNet\\TODOAPI\\TODOAPITests\\TODOAPITests\\Services\\AuthServiceTests.cs",
+              "RelativeToolTip": "TODOAPITests\\Services\\AuthServiceTests.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T20:29:11.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "TodoControllerTests.cs",
               "DocumentMoniker": "D:\\DotNet\\TODOAPI\\TODOAPITests\\TODOAPITests\\Controllers\\TodoControllerTests.cs",
               "RelativeDocumentMoniker": "TODOAPITests\\Controllers\\TodoControllerTests.cs",
-              "ToolTip": "D:\\DotNet\\TODOAPI\\TODOAPITests\\TODOAPITests\\Controllers\\TodoControllerTests.cs*",
-              "RelativeToolTip": "TODOAPITests\\Controllers\\TodoControllerTests.cs*",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAAwGkAAAApAAAAAAAAAA==",
+              "ToolTip": "D:\\DotNet\\TODOAPI\\TODOAPITests\\TODOAPITests\\Controllers\\TodoControllerTests.cs",
+              "RelativeToolTip": "TODOAPITests\\Controllers\\TodoControllerTests.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAMwBEAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T00:14:49.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T20:28:50.507Z"
             }
           ]
         }

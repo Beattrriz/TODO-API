@@ -1,6 +1,11 @@
-D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\TODOAPI.exe
 D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\appsettings.Development.json
 D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\appsettings.json
+D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\TODOAPI.exe
+D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\TODOAPI.deps.json
+D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\TODOAPI.runtimeconfig.json
+D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\TODOAPI.dll
+D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\TODOAPI.pdb
+D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\TODOAPI.xml
 D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\Humanizer.dll
 D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -130,6 +135,7 @@ D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\TODOAPI.AssemblyInfo.cs
 D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\TODOAPI.csproj.CoreCompileInputs.cache
 D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\TODOAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\TODOAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\TODOAPI.sourcelink.json
 D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\staticwebassets.build.json
 D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\staticwebassets.development.json
 D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\staticwebassets\msbuild.TODOAPI.Microsoft.AspNetCore.StaticWebAssets.props
@@ -141,13 +147,7 @@ D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\scopedcss\bundle\TODOAPI.styles.css
 D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\TODOAPI.csproj.Up2Date
 D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\TODOAPI.dll
 D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\refint\TODOAPI.dll
+D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\TODOAPI.xml
 D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\TODOAPI.pdb
-D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\TODOAPI.deps.json
-D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\TODOAPI.runtimeconfig.json
-D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\TODOAPI.dll
-D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\TODOAPI.pdb
 D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\TODOAPI.genruntimeconfig.cache
 D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\ref\TODOAPI.dll
-D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\TODOAPI.sourcelink.json
-D:\DotNet\TODOAPI\TODOAPI\bin\Debug\net8.0\TODOAPI.xml
-D:\DotNet\TODOAPI\TODOAPI\obj\Debug\net8.0\TODOAPI.xml

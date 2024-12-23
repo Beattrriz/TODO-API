@@ -1,16 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\TODOAPI",
     "\\TODOAPITests",
-    "\\TODOAPITests\\TODOAPITests",
-    "\\TODOAPITests\\TODOAPITests\\Helper",
-    "\\TODOAPITests\\TODOAPITests\\Services",
     "\\TODOAPI\\Controllers",
     "\\TODOAPI\\Data",
     "\\TODOAPI\\Interface",
     "\\TODOAPI\\Services"
   ],
-  "SelectedNode": "\\TODOAPITests\\TODOAPITests\\Controllers\\UserControllerTests.cs",
+  "SelectedNode": "\\TODOAPI",
   "PreviewInSolutionExplorer": false
 }

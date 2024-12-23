@@ -4,48 +4,6 @@
         <name>TODOAPI</name>
     </assembly>
     <members>
-        <member name="M:TODOAPI.Controllers.TodoController.GetTodos">
-            <summary>
-            Retorna todas as tarefas do usuário autenticado.
-            </summary>
-        </member>
-        <member name="M:TODOAPI.Controllers.TodoController.GetTodo(System.Int32)">
-            <summary>
-            Retorna uma tarefa específica do usuário autenticado.
-            </summary>
-            <param name="id">ID da tarefa.</param>
-        </member>
-        <member name="M:TODOAPI.Controllers.TodoController.CreateTodo(TODOAPI.DTOs.TodoDto)">
-            <summary>
-            Cria uma nova tarefa para o usuário autenticado.
-            </summary>
-            <param name="todoDto">Dados da tarefa a ser criada.</param>
-        </member>
-        <member name="M:TODOAPI.Controllers.TodoController.UpdateTodo(System.Int32,TODOAPI.DTOs.TodoUpdateDto)">
-            <summary>
-            Atualiza os dados de uma tarefa existente.
-            </summary>
-            <param name="id">ID da tarefa a ser atualizada.</param>
-            <param name="todoDto">Dados atualizados da tarefa.</param>
-        </member>
-        <member name="M:TODOAPI.Controllers.TodoController.DeleteTodo(System.Int32)">
-            <summary>
-            Deleta uma tarefa do usuário autenticado.
-            </summary>
-            <param name="id">ID da tarefa a ser deletada.</param>
-        </member>
-        <member name="M:TODO_TASK.Controllers.UserController.Register(TODOAPI.DTOs.RegisterDto)">
-            <summary>
-            Registra um novo usuário no sistema.
-            </summary>
-            <param name="registerDto">Dados necessários para registrar o usuário.</param>
-        </member>
-        <member name="M:TODO_TASK.Controllers.UserController.Login(TODOAPI.DTOs.LoginDto)">
-            <summary>
-            Autentica um usuário e gera um token JWT.
-            </summary>
-            <param name="loginDto">Dados necessários para autenticar o usuário.</param>
-        </member>
         <member name="T:TODO_TASK.Migrations.InitialMigration">
             <inheritdoc />
         </member>
