@@ -13,91 +13,73 @@ namespace TODOAPI.Tests.Services
         private readonly Mock<IPasswordHasher<User>> _passwordHasherMock;
         private readonly ApplicationDbContext _context;
         private readonly AuthService _authService;
+        private readonly AuthServiceTestsMock _helper;
 
         public AuthServiceTests()
-        {          
+        {
             _context = InMemoryDbContextHelper.CreateDbContext();
-         
             _passwordHasherMock = new Mock<IPasswordHasher<User>>();
-       
             _authService = new AuthService(_context, _passwordHasherMock.Object);
+            _helper = new AuthServiceTestsMock(_context, _passwordHasherMock, _authService);
         }
 
 
         [Fact]
         public async Task RegisterUserAsync_DeveRegistrarUsuarioComSucesso()
         {
-            //Arrange
+            // Arrange
             var userName = "TestUser";
             var email = "test@example.com";
             var password = "password123";
+            var hashedPassword = "hashedPassword";
 
-            _passwordHasherMock
-            .Setup(ph => ph.HashPassword(null, password))
-            .Returns("hashedPassword");
+            _helper.SetupPasswordHasherToHash(password, hashedPassword);
 
-            //Act
+            // Act
             var result = await _authService.RegisterUserAsync(userName, email, password);
 
-            //Assert
+            // Assert
             Assert.NotNull(result);
             Assert.Equal(userName, result.UserName);
             Assert.Equal(email, result.Email);
-            Assert.Equal("hashedPassword", result.PasswordHash);
-
+            Assert.Equal(hashedPassword, result.PasswordHash);
         }
+
 
         [Fact]
         public async Task RegisterUserAsync_DeveLancarExcecao_QuandoEmailJaExistir()
         {
-            //Arrange
+            // Arrange
             var existingEmail = "existing@example.com";
             var userName = "NewUser";
             var password = "password123";
 
-            var existingUser = new User
-            {
-                UserName = "ExistingUser",
-                Email = existingEmail,
-                PasswordHash = "hashedPassword"
-            };
+            await _helper.CreateUserAsync("ExistingUser", existingEmail, "hashedPassword");
 
-            _context.Users.Add(existingUser);
-            await _context.SaveChangesAsync();
-
-            //Act & Assert
+            // Act & Assert
             var exception = await Assert.ThrowsAsync<InvalidOperationException>(() =>
                 _authService.RegisterUserAsync(userName, existingEmail, password)
             );
-           
+
             Assert.Equal("Este e-mail já está registrado.", exception.Message);
         }
 
         [Fact]
         public async Task AuthenticateUserAsync_DeveRetornarUsuario_SeCredenciaisForemValidas()
         {
-            //Arrange
+            // Arrange
             var email = "valid@example.com";
             var password = "password123";
+            var hashedPassword = "hashedPassword";
 
-            var user = new User
-            {
-                UserName = "ValidUser",
-                Email = email,
-                PasswordHash = "hashedPassword"
-            };
+            var user = await _helper.CreateUserAsync("ValidUser", email, hashedPassword);
 
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+            _helper.SetupPasswordHasherToVerify(user, password, PasswordVerificationResult.Success);
 
-            _passwordHasherMock
-            .Setup(ph => ph.VerifyHashedPassword(user, user.PasswordHash, password))
-            .Returns(PasswordVerificationResult.Success);
-
-            //Act
+            // Act
             var result = await _authService.AuthenticateUserAsync(email, password);
 
-            //Assert
+            // Assert
             Assert.NotNull(result);
             Assert.Equal(email, result.Email);
             Assert.Equal(user.UserName, result.UserName);
@@ -110,10 +92,10 @@ namespace TODOAPI.Tests.Services
             var email = "nonexistent@example.com";
             var password = "password123";
 
-            //Act
+            // Act
             var result = await _authService.AuthenticateUserAsync(email, password);
 
-            //Assert
+            // Assert
             Assert.Null(result);
         }
 
@@ -124,25 +106,15 @@ namespace TODOAPI.Tests.Services
             var email = "valid@example.com";
             var password = "wrongPassword";
 
-            var user = new User
-            {
-                UserName = "ValidUser",
-                Email = email,
-                PasswordHash = "hashedPassword"
-            };
+            var user = await _helper.CreateUserAsync("ValidUser", email, "hashedPassword");
 
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
-
-            _passwordHasherMock
-            .Setup(ph => ph.VerifyHashedPassword(user, user.PasswordHash, password))
-            .Returns(PasswordVerificationResult.Failed);
+            _helper.SetupPasswordHasherToVerify(user, password, PasswordVerificationResult.Failed);
 
             // Act
             var result = await _authService.AuthenticateUserAsync(email, password);
 
             // Assert
             Assert.Null(result);
-        }     
+        }
     }
 }

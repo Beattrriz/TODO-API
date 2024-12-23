@@ -5,8 +5,6 @@ using TODO_TASK.Controllers;
 using TODOAPI.DTOs;
 using TODOAPI.Interface;
 using TODOAPI.Models;
-using TODOAPI.Services;
-using TODOAPI.Tests.Helper;
 
 namespace TODOAPI.Tests.Controllers
 {
@@ -15,28 +13,24 @@ namespace TODOAPI.Tests.Controllers
         private readonly Mock<IAuthService> _authServiceMock;
         private readonly Mock<IJwtTokenService> _jwtTokenServiceMock;
         private readonly UserController _userController;
+        private readonly UserControllerTestsMock _helper;
 
         public UserControllerTests()
         {
             _authServiceMock = new Mock<IAuthService>();
             _jwtTokenServiceMock = new Mock<IJwtTokenService>();
             _userController = new UserController(_authServiceMock.Object, _jwtTokenServiceMock.Object);
+            _helper = new UserControllerTestsMock(_authServiceMock, _jwtTokenServiceMock);
         }
 
         [Fact]
-        public async Task Register_DeveRetornarOk_SeRegistroForBemSucedido()
+        public async Task Register_DeveRegistrarUsuarioComSucesso()
         {
             // Arrange
-            var registerDto = new RegisterDto
-            {
-                UserName = "TestUser",
-                Email = "test@example.com",
-                Password = "password123"
-            };
+            var registerDto = _helper.CreateRegisterDto("TestUser", "test@example.com", "password123");
+            var user = _helper.CreateUser(registerDto.UserName, registerDto.Email);
 
-            _authServiceMock
-                .Setup(service => service.RegisterUserAsync(registerDto.UserName, registerDto.Email, registerDto.Password))
-                .ReturnsAsync(new User { UserName = registerDto.UserName, Email = registerDto.Email });
+            _helper.SetupRegisterUser(registerDto.UserName, registerDto.Email, registerDto.Password, user);
 
             // Act
             var result = await _userController.Register(registerDto);
@@ -51,16 +45,10 @@ namespace TODOAPI.Tests.Controllers
         public async Task Register_DeveRetornarBadRequest_SeEmailJaExistir()
         {
             // Arrange
-            var registerDto = new RegisterDto
-            {
-                UserName = "TestUser",
-                Email = "existing@example.com",
-                Password = "password123"
-            };
+            var registerDto = _helper.CreateRegisterDto("TestUser", "existing@example.com", "password123");
+            var exception = new InvalidOperationException("Este e-mail já está registrado.");
 
-            _authServiceMock
-                .Setup(service => service.RegisterUserAsync(registerDto.UserName, registerDto.Email, registerDto.Password))
-                .ThrowsAsync(new InvalidOperationException("Este e-mail já está registrado."));
+            _helper.SetupRegisterUserThrows(registerDto.UserName, registerDto.Email, registerDto.Password, exception);
 
             // Act
             var result = await _userController.Register(registerDto);
@@ -75,25 +63,11 @@ namespace TODOAPI.Tests.Controllers
         public async Task Login_DeveRetornarOk_SeLoginForBemSucedido()
         {
             // Arrange
-            var loginDto = new LoginDto
-            {
-                Email = "test@example.com",
-                Password = "password123"
-            };
+            var loginDto = _helper.CreateLoginDto("test@example.com", "password123");
+            var user = _helper.CreateUser("TestUser", loginDto.Email);
 
-            var user = new User
-            {
-                UserName = "TestUser",
-                Email = loginDto.Email
-            };
-
-            _authServiceMock
-                .Setup(service => service.AuthenticateUserAsync(loginDto.Email, loginDto.Password))
-                .ReturnsAsync(user);
-
-            _jwtTokenServiceMock
-                .Setup(service => service.GenerateJwtToken(user))
-                .Returns("mocked-jwt-token");
+            _helper.SetupAuthenticateUser(loginDto.Email, loginDto.Password, user);
+            _helper.SetupGenerateJwtToken(user, "mocked-jwt-token");
 
             // Act
             var result = await _userController.Login(loginDto);
@@ -108,15 +82,9 @@ namespace TODOAPI.Tests.Controllers
         public async Task Login_DeveRetornarUnauthorized_SeCredenciaisEstiveremErradas()
         {
             // Arrange
-            var loginDto = new LoginDto
-            {
-                Email = "test@example.com",
-                Password = "wrongpassword"
-            };
+            var loginDto = _helper.CreateLoginDto("test@example.com", "wrongpassword");
 
-            _authServiceMock
-                .Setup(service => service.AuthenticateUserAsync(loginDto.Email, loginDto.Password))
-                .ReturnsAsync((User)null);  
+            _helper.SetupAuthenticateUser(loginDto.Email, loginDto.Password, null);
 
             // Act
             var result = await _userController.Login(loginDto);
@@ -125,6 +93,6 @@ namespace TODOAPI.Tests.Controllers
             var unauthorizedResult = Assert.IsType<UnauthorizedObjectResult>(result);
             Assert.Equal(401, unauthorizedResult.StatusCode);
             Assert.Contains("E-mail ou senha inválidos.", unauthorizedResult.Value.ToString());
-        }     
+        }
     }
 }

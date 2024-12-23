@@ -42,8 +42,7 @@
               "RelativeToolTip": "TODOAPI\\Program.cs",
               "ViewState": "AgIAAFUAAAAAAAAAAAAAAF0AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T19:24:13.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T19:24:13.068Z"
             },
             {
               "$type": "Document",
@@ -55,8 +54,7 @@
               "RelativeToolTip": "TODOAPI\\Services\\JwtTokenService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T19:19:32.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T19:19:32.095Z"
             },
             {
               "$type": "Document",
@@ -68,8 +66,7 @@
               "RelativeToolTip": "TODOAPI\\Interface\\IJwtTokenService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T19:18:59.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-22T19:18:59.222Z"
             },
             {
               "$type": "Document",
@@ -79,7 +76,7 @@
               "RelativeDocumentMoniker": "TODOAPI\\Controllers\\UserController.cs",
               "ToolTip": "D:\\DotNet\\TODOAPI\\TODOAPI\\Controllers\\UserController.cs",
               "RelativeToolTip": "TODOAPI\\Controllers\\UserController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowDEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwA8AAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-22T19:16:25.684Z",
               "EditorCaption": ""
@@ -92,7 +89,7 @@
               "RelativeDocumentMoniker": "TODOAPI\\Controllers\\TodoController.cs",
               "ToolTip": "D:\\DotNet\\TODOAPI\\TODOAPI\\Controllers\\TodoController.cs",
               "RelativeToolTip": "TODOAPI\\Controllers\\TodoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAmwKgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-22T19:16:24.828Z",
               "EditorCaption": ""
