@@ -138,6 +138,28 @@ Para usar endpoints protegidos, você precisará de um token JWT. Siga os passos
 - **Acesso restrito**: Apenas o usuário que criou uma tarefa pode visualizá-la, atualizá-la ou excluí-la.
 - **Conclusão de tarefas**: O campo completedAt é gerado automaticamente.
 
+## Testes Unitários
+A aplicação inclui testes unitários para garantir o correto funcionamento dos componentes principais da API. Os testes estão localizados na pasta TODOAPITests.
+
+### Pré-requisitos para Executar os Testes
+Antes de executar os testes, certifique-se de que você tenha os seguintes requisitos instalados:
+- xUnit - Framework de testes utilizado.
+- Moq - Framework de mocking para simular dependências.
+
+## Executando os Testes Unitários
+1. Navegue até a pasta TODOAPITests
+    ```bash
+    cd TODOAPITests/TODOAPITests
+   ```
+2. Restaure as dependências dos testes:
+    ```bash
+    dotnet restore
+   ```
+3. Execute os testes:
+   ```bash
+    dotnet test
+   ```
+
 
   
    
